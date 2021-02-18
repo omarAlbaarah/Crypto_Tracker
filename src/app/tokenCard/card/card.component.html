@@ -1,0 +1,18 @@
+<div class="card mb-4">
+  <div class="card-img-wrapper">
+    <img class= "card-img-top" src="{{'assets/ccImages/' + cryptoToken.name + '.png'}}"  
+    alt="{{cryptoToken.name}}">
+    <ul class="list-inline member-icons animate text-center">
+      <li class="list-inline-item" routerLinkActive="active">
+        <button class="btn btn-primary" [routerLink]="['/coinDetails',cryptoToken.id, cryptoToken.name, cryptoToken.price, cryptoToken.market_cap, cryptoToken.rank]" >
+          <i class="fa fa-info"></i></button></li>
+      </ul>
+  </div>
+  <div class="card-body p-1">
+    <h6 class="card-title text-center mb-1"><i class="fa fa-bitcoin"></i>
+      {{cryptoToken.name}}, {{cryptoToken.symbol}}
+    </h6>
+    <p class="card-text text-muted text-center"><i class="fa fa-dollar-sign"></i> {{cryptoToken.price}}</p>
+  </div>
+
+</div>

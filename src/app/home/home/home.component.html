@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center" *ngIf="loading">
+  <strong>Loading...</strong>
+  <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+</div>
+
+
+<div class="container m-2">
+  <div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" 
+    autocomplete="off" placeholder="&#61442;  search here..">
+  </div>
+  <div class="row">
+    <div *ngFor="let token of tokens | filter:searchText" class="col-lg-2 col-md-3 col-sm-6">
+      <app-card [cryptoToken]="token"></app-card>
+    </div>
+  </div>
+</div>
