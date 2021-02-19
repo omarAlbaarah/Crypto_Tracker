@@ -4,13 +4,13 @@
 </div>
 
 
-<div class="container m-2">
+<div class="container">
   <div class="search-hero">
     <input class="form-control" type="text" name="search" [(ngModel)]="searchText" 
     autocomplete="off" placeholder="&#61442;  search here..">
   </div>
   <div class="row">
-    <div *ngFor="let token of tokens | filter:searchText" class="col-lg-2 col-md-3 col-sm-6">
+    <div *ngFor="let token of tokens | filter:searchText" class="col-lg-3 col-md-6 col-sm-12">
       <app-card [cryptoToken]="token"></app-card>
     </div>
   </div>
