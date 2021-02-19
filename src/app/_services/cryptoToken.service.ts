@@ -7,7 +7,7 @@ import { CryptoToken } from '../_models/cryptoToken';
   providedIn: 'root'
 })
 export class CryptoTokenService {
-  baseUrl = "http://localhost:8080/api";
+  baseUrl = "http://crypto-currencies-omar.herokuapp.com/api";
 constructor(private http: HttpClient) { }
 
 getTokens(): Observable<CryptoToken[]>{
